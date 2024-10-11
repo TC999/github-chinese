@@ -322,8 +322,6 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Discover gists · GitHub": "探索代码片段 · GitHub",
         "Explore GitHub Sponsors": "探索 GitHub 赞助者",
         "Actions Usage Metrics": "操作使用情况",
-        "Fine-grained Personal Access Tokens": "精细化的个人访问令牌",
-        "Import repository": "导入仓库",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -6676,7 +6674,7 @@ I18N["zh-CN"]["repository"] = { // 仓库页面 /<user-name>/<repo-name>/
                             "Checking branch status": "检查分支情况",
                             "Create branch": "创建分支",
                         "Export changes to a fork": "将更改导出到复刻",
-                            "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的存储库的写访问权限。这将创建一个新的存储库分支在",
+                            "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的仓库的写访问权限。这将创建一个新的仓库分支在",
                             ", reassign your codespace to that fork, and export your changes to a new branch.": "，将代码空间重新分配给该复刻，并将更改导出到新分支。",
                             "Create fork": "创建复刻",
                         "Change machine type": "修改机器类型",
@@ -15259,7 +15257,7 @@ I18N["zh-CN"]["repository/codespaces"] = { // 仓库 - 代码空间界面 /<user
                     "Checking branch status": "检查分支情况",
                     "Create branch": "创建分支",
                 "Export changes to a fork": "将更改导出到复刻",
-                    "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的存储库的写访问权限。这将创建一个新的存储库分支在",
+                    "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的仓库的写访问权限。这将创建一个新的仓库分支在",
                     ", reassign your codespace to that fork, and export your changes to a new branch.": "，将代码空间重新分配给该复刻，并将更改导出到新分支。",
                     "Create fork": "创建复刻",
                 "Change machine type": "修改机器类型",
@@ -20904,7 +20902,7 @@ I18N["zh-CN"]["codespaces"] = { // 代码空间页面
                     "Checking branch status": "检查分支情况",
                     "Create branch": "创建分支",
                 "Export changes to a fork": "将更改导出到复刻",
-                    "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的存储库的写访问权限。这将创建一个新的存储库分支在",
+                    "You do not have write access to this codespace's repository. This will create a new fork of the repository at": "您没有对此代码空间的仓库的写访问权限。这将创建一个新的仓库分支在",
                     ", reassign your codespace to that fork, and export your changes to a new branch.": "，将代码空间重新分配给该复刻，并将更改导出到新分支。",
                     "Create fork": "创建复刻",
                 "Publish to a new repository": "发布到新仓库", // 从模板创建
@@ -21557,4 +21555,68 @@ I18N["zh-CN"]["copilot"] = {
             "of the world’s leading AI developer tool.": "。",
     },
     "regexp":[],
+};
+
+I18N["zh-CN"]["pages"] = {
+    "static": {
+        "Pages Help": "帮助",
+
+        "Websites for you and your projects.": "为您和您的项目提供网站。",
+            "Hosted directly from your": "直接托管自您的",
+                "GitHub repository": "GitHub 仓库",
+                ". Just edit, push, and your changes are live.": "。只需编辑、推送，您的更改即可生效。",
+        
+        "Ready to get started? Build your own site from scratch or generate one for your project.": "准备好了吗？从头开始创建您自己的网站或为您的项目生成一个网站。",
+            "You get one site per GitHub account and organization,": "每个 GitHub 账户和组织可获得一个站点，",
+            "and unlimited project sites. Let‘s get started.": "项目站点数量不限。让我们开始吧",
+
+        "User or organization site": "用户或组织网站",
+            // 1
+                "Create a repository": "新建仓库",
+                    "Head over to": "前往",
+                        "and": "并",
+                        "create a new public repository": "新建公共仓库",
+                        "named": "命名为",
+                        ".github.io, where": ".github.io，其中",
+                        "is your username (or organization name) on GitHub.": "是您在 GitHub 上的用户名（或组织名称）。",
+                        
+                    "If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.": "若仓库的前半部分与您的用户名不完全匹配，则无法使用，因此请正确填写。",
+            
+            // ？（原文如此）
+                "What git client are you using?": "您使用的是哪个 git 客户端？",
+                    "A terminal": "终端",
+                        // 2
+                            "Clone the repository": "克隆此仓库",
+                                "Go to the folder where you want to store your project, and clone the new repository:": "转到要存放项目的文件夹，克隆新仓库：",
+                        
+                        // 3
+                            "Enter the project folder and add an index.html file:": "进入项目文件夹，添加一个 index.html 文件：",
+                        
+                        // 4
+                            "Push it": "推送",
+                                "Add, commit, and push your changes:": "添加，提交并推送更改：",
+                        
+                        // 5
+                            "…and you're done!": "完成！",
+                                "Fire up a browser and go to": "打开浏览器并打开",
+                    
+                    // GitHub Desktop
+                        // 2
+                            "Click the \"Set up in Desktop\" button. When the GitHub desktop app opens, save the project.": "点击 “在 Desktop 上设置 ”按钮。打开 GitHub Desktop 后，保存项目。",
+
+                    "I don't know": "我不知道",
+
+        "Project site": "项目网站",
+
+        // 底部
+            "Now that you’re up and running, here are a few things you should know.": "现在已经开始运行了，下面是您应该知道的一些事情。",
+            "Blogging with Jekyll": "使用 Jekyll 创建博客",
+               // 使用 Jekyll，你可以使用漂亮的 Markdown 语法写博客，而且无需处理任何数据库。了解如何设置 Jekyll
+                "Using": "使用",
+                ", you can blog using beautiful Markdown syntax, and without having to deal with any databases.": "你可以使用漂亮的 Markdown 语法写博客，而且无需处理任何数据库。",
+                "Learn how to set up Jekyll": "了解如何设置 Jekyll",
+            "Custom URLs": "自定义 URL",
+            "Guides": "指南",
+    },
+    "regexp": [],
 };

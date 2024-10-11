@@ -11,6 +11,7 @@
 // @match        https://skills.github.com/*
 // @match        https://gist.github.com/*
 // @match        https://www.githubstatus.com/*
+// @match        https://pages.github.com/*
 // @require      https://raw.githubusercontent.com/maboloshi/github-chinese/gh-pages/locals.js?v1.9.3-2024-10-03
 // @run-at       document-start
 // @grant        GM_xmlhttpRequest
@@ -181,7 +182,8 @@
         const siteMapping = {
             'gist.github.com': 'gist',
             'www.githubstatus.com': 'status',
-            'skills.github.com': 'skills'
+            'skills.github.com': 'skills',
+            'pages.github.com': 'pages',
         };
         const site = siteMapping[url.hostname] || 'github';
         const pathname = url.pathname;
@@ -202,7 +204,7 @@
 
         if (isSession) {
             page = 'session-authentication';
-        } else if (site === 'gist' || site === 'status' || site === 'skills') {
+        } else if (site === 'gist' || site === 'status' || site === 'skills' || site === 'pages') {
             page = site;
         } else if (isProfile) {
             t = url.search.match(/tab=([^&]+)/);
