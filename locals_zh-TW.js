@@ -1698,6 +1698,8 @@ I18N["zh-TW"]["public"] = { // 公共區域翻譯
             "Privacy Policy": "隱私政策",
             "Cancel": "取消",
             "Send": "發送",
+
+            "View token usage": "查看詞元消耗",
             // 響應狀態
                 "Copilot is responding…": "Copilot 響應中…",
                 "creating plan": "創建計劃中",
@@ -6525,6 +6527,9 @@ I18N["zh-TW"]["settings/copilot"] = { // 設置 - GitHub Copilot
         [/Free responses reset (\d+) 天之內\. Plan upgrades are temporarily unavailable\. Read more。?/, "免費響應額度將在 $1 天后重置。計劃升級暫時不可用。瞭解更多。"],
         [/Free responses reset in (\d+) days?\. Plan upgrades are temporarily unavailable\./, "免費響應額度將在 $1 天后重置。計劃升級暫時不可用。"],
         [/Free responses reset in (\d+) days?\. Plan upgrades are temporarily unavailable\. Read more\.?/, "免費響應額度將在 $1 天后重置。計劃升級暫時不可用。瞭解更多。"],
+        // 使用情況
+        [/((\d+) \/ (\d+)) AI credits/, "$1 AI 額度"],
+        [/((\$\d+(\.\d+)?) \/ (\$\d+(\.\d+)?)) budget/, "$1 預算"],
     ],
     "title": {
         "static": {
@@ -8840,6 +8845,9 @@ I18N["zh-TW"]["page-new-repo"] = {// 儲存庫 - 新建/導入/復刻儲存庫
             "is ready.": "已準備就緒。",
 
         // 復刻儲存庫 /<user-name>/<repo-name>/fork
+            // 錯誤訊息
+                "You can't fork this repository at this time.": "您此時不能復刻此儲存庫。",
+
             "Create a new fork": "創建新復刻",
                 "A": " ",
                 "fork": "復刻",
@@ -17776,6 +17784,8 @@ I18N["zh-TW"]["repository/settings"] = { // 儲存庫設置 - 通常 /<user-name
             "Unexpected bad things will happen if you don’t read this!": "如果您不閱讀此說明，將會發生意想不到的事情！",
             "All scheduled workflows will stop running.": "所有預定的工作流程將停止執行。",
             "Security features will be unavailable:": "安全功能將無法使用：",
+            "Security features will be interrupted:": "安全功能將停止",
+            "Code scanning will be paused": "程式碼掃描將暫停",
             "Code scanning": "程式碼掃描",
             "Before you archive, please consider:": "在您存檔之前，請考慮：",
             "Updating any repository settings": "更新儲存庫設置",
@@ -28614,7 +28624,16 @@ I18N["zh-TW"]["copilot"] = {
             "Bad response": "點踩",
             "Retry with…": "重試…",
 
+            "View message token usage": "查看此消息詞元消耗",
+                "Message token usage": "此消息詞元消耗",
+                    "Input:": "輸入：",
+                    "Output:": "輸出：",
+                    "tokens": "詞元",
+
             "Scroll to bottom": "滾動至底部",
+
+            "New topic? A fresh chat keeps your usage lower.": "新話題？新聊天有助於降低使用量。",
+                "Start new chat": "開始新聊天",
 
         // 右側
             "Share conversation": "分享對話",
