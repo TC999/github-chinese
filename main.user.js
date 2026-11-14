@@ -352,11 +352,13 @@
     function watchReactCommits() {
         if (typeof PerformanceObserver !== 'function') return;
         try {
+            // Chromium 不支持 entryTypes + buffered 的组合（控制台会报错），
+            // 且该组合下 buffered 被忽略；只有单个 type 才能回放注册前的 mark。
             new PerformanceObserver((list) => {
                 if (list.getEntries().some(entry => entry.name.startsWith('react-root:commit:'))) {
                     safe(mountDescButton, '描述翻译')();
                 }
-            }).observe({ entryTypes: ['mark'], buffered: true });
+            }).observe({ type: 'mark', buffered: true });
         } catch (e) {
             console.error('[GitHub 中文化插件] React 提交监听失败:', e);
         }

@@ -303,7 +303,9 @@ for (const fileName of ['main.user.js', 'main(nju.edu).user.js', 'main_zh-TW.use
 
 test('watchReactCommits 只在 React root 提交 mark 时挂载描述按钮', () => {
     const harness = loadWatchReactCommits();
-    assert.equal(harness.options.entryTypes[0], 'mark');
+    // Chromium 不支持 entryTypes + buffered（控制台报 warning 且 buffered 被忽略），必须是单个 type
+    assert.equal(harness.options.type, 'mark');
+    assert.equal(harness.options.entryTypes, undefined);
     assert.equal(harness.options.buffered, true);
 
     harness.notify(['react-root:render-start:code-view', 'unrelated-mark']);
